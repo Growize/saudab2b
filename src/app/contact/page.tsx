@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Globe, ArrowRight, Building2, Send } from "lucide-react";
@@ -52,7 +52,7 @@ export default function B2BContact() {
                    <div className="w-10 h-10 rounded-full bg-[#F7F3EB] flex items-center justify-center text-[#C5A059]">
                       <MapPin className="w-4 h-4" />
                    </div>
-                   <h3 className="text-[12px] uppercase tracking-[0.3em] font-bold">Headquarters • UAE</h3>
+                   <h3 className="text-[12px] uppercase tracking-[0.3em] font-bold">Production Unit • UAE</h3>
                 </div>
                 <p className="text-[11px] text-gray-500 uppercase tracking-widest leading-loose pl-14">
                   SAUDA Atelier, Industrial Area 1,<br /> Ajman, United Arab Emirates
@@ -68,9 +68,7 @@ export default function B2BContact() {
                    </div>
                    <h3 className="text-[12px] uppercase tracking-[0.3em] font-bold">Distribution • Europe</h3>
                 </div>
-                <p className="text-[11px] text-gray-500 uppercase tracking-widest leading-loose pl-14">
-                  Mayfair Showroom, London, UK<br /> (By Appointment Only)
-                </p>
+                
               </div>
             </div>
 
@@ -102,7 +100,7 @@ export default function B2BContact() {
                   <input type="text" className="w-full bg-transparent outline-none text-[11px] uppercase tracking-widest" placeholder="YOUR NAME" />
                 </div>
                 <div className="space-y-2 border-b border-gray-100 pb-2">
-                  <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-gray-400">Company Website</label>
+                  <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-gray-400">Company </label>
                   <input type="text" className="w-full bg-transparent outline-none text-[11px] uppercase tracking-widest" placeholder="WWW.BOUTIQUE.COM" />
                 </div>
               </div>
@@ -148,13 +146,18 @@ export default function B2BContact() {
       </section>
 
       {/* --- BOTTOM CTA --- */}
-      <section className="py-24 border-t border-gray-50 text-center">
-         <h3 className="text-[11px] uppercase tracking-[0.6em] text-gray-400 mb-8">Prefer Instant Communication?</h3>
-         <button className="px-10 py-4 border-2 border-black text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-black hover:text-white transition-all">
-           Connect via WhatsApp B2B
-         </button>
-      </section>
-
+<section className="py-24 border-t border-gray-50 text-center">
+  <h3 className="text-[11px] uppercase tracking-[0.6em] text-gray-400 mb-8">
+    Prefer Instant Communication?
+  </h3>
+  <Link 
+    href="https://wa.me/971544802041?text=Hello%20SAUDA%20COUTURE,%20I%20am%20interested%20in%20a%20B2B%20wholesale%20inquiry%20for%20the%202026%20Collection." 
+    target="_blank"
+    className="inline-block px-10 py-4 border-2 border-black text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-black hover:text-white transition-all duration-300 active:scale-95"
+  >
+    Connect via WhatsApp B2B
+  </Link>
+</section>
     </div>
   );
 }

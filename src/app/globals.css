@@ -23,4 +23,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- PRODUCT ZOOM UTILITIES --- */
+.cursor-zoom-in {
+  cursor: zoom-in;
+}
+
+/* Ensure smooth image scaling for the zoom effect */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.transition-transform {
+  transition-property: transform;
+}
+
+/* Custom scrollbar for the product gallery */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
