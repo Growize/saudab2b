@@ -25,13 +25,16 @@ export default function Footer() {
           
           {/* COLUMN 1: BRAND & CONTACT */}
           <div className="space-y-8 text-center md:text-left">
-            <Image src="/logo.png" alt="SAUDA" width={120} height={40} className="mx-auto md:mx-0" unoptimized />
+            {/* RESOLVED: Logo is now clickable and leads to homepage */}
+            <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
+              <Image src="/logo.png" alt="SAUDA" width={120} height={40} className="mx-auto md:mx-0" unoptimized />
+            </Link>
             <div className="space-y-4">
               <p className="text-[11px] text-gray-500 leading-loose uppercase tracking-[0.2em] font-medium">
                 Premium Abaya couture for the modern women. <br/> DUBAI • WORLDWIDE
               </p>
               <div className="flex flex-col gap-2 text-[10px] uppercase tracking-widest font-bold text-black">
-                <a href="tel:+971544802041" className="hover:text-[#C5A059] transition-colors">+971 54 480 2041</a>
+                <a href="tel:+971544802041" className="hover:text-[#C5A059] transition-colors whitespace-nowrap">+971 54 480 2041</a>
                 <a href="mailto:info@saudafashion.com" className="hover:text-[#C5A059] transition-colors lowercase tracking-normal">info@saudafashion.com</a>
               </div>
             </div>
@@ -42,30 +45,30 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* COLUMN 2: THE HOUSE (Black & Bold Links) */}
+          {/* COLUMN 2: THE HOUSE */}
           <div className="text-center md:text-left">
             <h4 className="text-[12px] uppercase tracking-[0.4em] mb-10 font-bold text-black opacity-40">The House</h4>
             <ul className="text-[11px] text-black space-y-5 uppercase tracking-[0.3em] font-bold">
-              <li><Link href="/who-we-are" className="hover:text-[#C5A059] transition-colors">Who We Are</Link></li>
-              <li><Link href="/collections" className="hover:text-[#C5A059] transition-colors">Collections</Link></li>
-              <li><Link href="/contact" className="hover:text-[#C5A059] transition-colors">Contact</Link></li>
+              <li><Link href="/who-we-are" className="hover:text-[#C5A059] transition-colors whitespace-nowrap">Who We Are</Link></li>
+              <li><Link href="/collections" className="hover:text-[#C5A059] transition-colors whitespace-nowrap">Collections</Link></li>
+              <li><Link href="/contact" className="hover:text-[#C5A059] transition-colors whitespace-nowrap">Contact</Link></li>
             </ul>
           </div>
 
-          {/* COLUMN 3: SERVICES (Black & Bold Links) */}
+          {/* COLUMN 3: SERVICES */}
           <div className="text-center md:text-left">
             <h4 className="text-[12px] uppercase tracking-[0.4em] mb-10 font-bold text-black opacity-40">Services</h4>
             <ul className="text-[11px] text-black space-y-5 uppercase tracking-[0.3em] font-bold">
-              <li><Link href="/wholesale" className="hover:text-[#C5A059] transition-colors">Wholesale Portal</Link></li>
-              <li><Link href="/custom-design" className="hover:text-[#C5A059] transition-colors">Custom Made</Link></li>
-              <li><Link href="/contact" className="hover:text-[#C5A059] transition-colors">Production Sourcing</Link></li>
+              {/* RESOLVED: Removed Wholesale Portal, replaced with Wholesale Inquiry */}
+              <li><Link href="/contact" className="hover:text-[#C5A059] transition-colors whitespace-nowrap">Wholesale Inquiry</Link></li>
+              <li><Link href="/custom-design" className="hover:text-[#C5A059] transition-colors whitespace-nowrap">Custom Made</Link></li>
+              <li><Link href="/contact" className="hover:text-[#C5A059] transition-colors whitespace-nowrap">Production Sourcing</Link></li>
             </ul>
           </div>
 
-          {/* COLUMN 4: GLASSMORPHISM NEWSLETTER */}
+          {/* COLUMN 4: NEWSLETTER */}
           <div className="text-center md:text-left">
             <div className="relative p-8 overflow-hidden border border-white/40 shadow-xl rounded-sm">
-              {/* Glass Effect Layers */}
               <div className="absolute inset-0 bg-white/40 backdrop-blur-md z-0" />
               <div className="absolute inset-0 bg-gradient-to-br from-[#F7F3EB]/30 to-transparent z-0" />
               
@@ -87,25 +90,25 @@ export default function Footer() {
           </div>
         </div>
 
-               {/* BOTTOM COPYRIGHT AREA */}
+        {/* BOTTOM COPYRIGHT AREA */}
         <div className="border-t border-gray-100 mt-12 pt-8 pb-4">
           <div className="relative flex flex-col md:flex-row items-center justify-between">
             
             {/* LEFT: Copyright */}
             <div className="md:w-1/3 text-left">
-              <span className="text-[10px] text-black font-bold uppercase tracking-[0.4em]">
+              <span className="text-[10px] text-black font-bold uppercase tracking-[0.4em] whitespace-nowrap">
                 © {new Date().getFullYear()} SAUDA COUTURE <span className="text-[#C5A059] mx-1">•</span> SAUDA FASHION FZC LLC
               </span>
             </div>
 
             {/* CENTER: Agency Credit */}
             <div className="md:w-1/3 text-center mt-4 md:mt-0">
-              <div className="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-medium">
+              <div className="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-medium whitespace-nowrap">
                 Designed & Developed by <a href="https://gro-wize.com" target="_blank" className="font-black text-black border-b border-[#C5A059]/40 hover:text-[#C5A059] transition-colors">Growize</a>
               </div>
             </div>
 
-            {/* RIGHT: Empty spacer to maintain center alignment for the credit */}
+            {/* RIGHT: Empty spacer */}
             <div className="hidden md:block md:w-1/3" />
             
           </div>

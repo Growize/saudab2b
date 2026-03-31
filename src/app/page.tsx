@@ -18,18 +18,19 @@ const CATEGORIES = [
   { name: "Essential Modesty", img: "/cat3.webp", link: "/collections" }
 ];
 
+// Prices removed to maintain B2B luxury aesthetic
 const BEST_SELLERS = [
-  { id: "classic-noir-abaya", name: "Classic Noir Abaya", price: "1,200 AED", img: "/cat1.webp", stats: "High Demand" },
-  { id: "gold-threaded-silk", name: "Gold Threaded Silk", price: "2,450 AED", img: "/cat2.webp", stats: "Global Favorite" },
-  { id: "sand-dune-linen", name: "Sand-Dune Linen", price: "950 AED", img: "/cat3.webp", stats: "B2B Staple" },
-  { id: "bridal-organza", name: "Bridal Organza", price: "3,800 AED", img: "/cat6.webp", stats: "Limited Stock" },
+  { id: "classic-noir-abaya", name: "Classic Noir Abaya", img: "/cat1.webp", stats: "High Demand" },
+  { id: "gold-threaded-silk", name: "Gold Threaded Silk", img: "/cat2.webp", stats: "Global Favorite" },
+  { id: "sand-dune-linen", name: "Sand-Dune Linen", img: "/cat3.webp", stats: "B2B Staple" },
+  { id: "bridal-organza", name: "Bridal Organza", img: "/cat6.webp", stats: "Limited Stock" },
 ];
 
 const NEW_ARRIVALS = [
-  { id: "raw-silk-kimono", name: "Raw Silk Kimono", price: "1,850 AED", img: "/cat1.webp", tag: "New" },
-  { id: "organza-overlay", name: "Organza Overlay", price: "2,100 AED", img: "/cat2.webp", tag: "Limited" },
-  { id: "linen-desert-wrap", name: "Linen Desert Wrap", price: "1,400 AED", img: "/cat3.webp", tag: "Bestseller" },
-  { id: "midnight-crepe", name: "Midnight Crepe", price: "2,400 AED", img: "/cat4.webp", tag: "New" },
+  { id: "raw-silk-kimono", name: "Raw Silk Kimono", img: "/cat1.webp", tag: "New" },
+  { id: "organza-overlay", name: "Organza Overlay", img: "/cat2.webp", tag: "Limited" },
+  { id: "linen-desert-wrap", name: "Linen Desert Wrap", img: "/cat3.webp", tag: "Bestseller" },
+  { id: "midnight-crepe", name: "Midnight Crepe", img: "/cat4.webp", tag: "New" },
 ];
 
 export default function SaudaFullPage() {
@@ -50,92 +51,48 @@ export default function SaudaFullPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-[#C5A059] selection:text-white font-sans overflow-x-hidden relative">
       
-{/* --- HERO SECTION (Mechanical Fix for Laptop Overlap) --- */}
- <section className="relative pt-24 min-h-[85vh] flex flex-col md:flex-row items-stretch overflow-hidden bg-white">
-  
-  {/* Left Content Column: Removed 'h-full' so it can expand if text is long */}
-  <div className="relative w-full md:w-1/2 flex flex-col justify-center px-12 lg:px-24 py-24 md:py-32 overflow-hidden bg-white">
-    
-    {/* Monstera Leaf Background Asset */}
-    <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.18]">
-      <Image 
-        src="/monstera-bg.png" 
-        alt="" 
-        fill 
-        className="object-contain object-left-bottom translate-x-[-8%] translate-y-[12%] scale-125" 
-        unoptimized 
-      />
-    </div>
+      {/* --- HERO SECTION (Laptop Overlap Fix Applied) --- */}
+      <section className="relative pt-24 min-h-[85vh] flex flex-col md:flex-row items-stretch overflow-hidden bg-white">
+        
+        <div className="relative w-full md:w-1/2 flex flex-col justify-center px-12 lg:px-24 py-24 md:py-32 overflow-hidden bg-white">
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.18]">
+            <Image src="/monstera-bg.png" alt="" fill className="object-contain object-left-bottom translate-x-[-8%] translate-y-[12%] scale-125" unoptimized />
+          </div>
 
-    <motion.div 
-      initial={{ opacity: 0, y: 30 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 1 }} 
-      className="relative z-10"
-    >
-      <h2 className="text-[12px] uppercase tracking-[0.6em] text-[#C5A059] mb-6 font-bold">
-        The 2026 Atelier
-      </h2>
-      <h1 className="text-5xl lg:text-[5.5rem] font-serif leading-[1.05] mb-10 text-black">
-        Timeless <br /> 
-        <span className="text-[#C5A059] italic font-light drop-shadow-sm">Modesty</span>
-      </h1>
-      <p className="max-w-md text-gray-500 text-sm leading-relaxed mb-14 font-medium tracking-wide">
-        Bespoke B2B solutions for luxury boutiques. Premium Emirati craftsmanship designed for global elegance.
-      </p>
-      
-      {/* CTA Buttons: Guaranteed spacing from bottom */}
-      <div className="flex flex-wrap items-center gap-10">
-        <Link 
-          href="/collections" 
-          className="px-12 py-5 bg-black text-white text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-[#C5A059] transition-all duration-500 shadow-2xl active:scale-95"
-        >
-          Shop Collection
-        </Link>
-        <Link 
-          href="/contact" 
-          className="text-[11px] uppercase tracking-[0.3em] font-bold border-b border-gray-300 pb-1 hover:border-black transition-all text-black"
-        >
-          Wholesale Inquiry
-        </Link>
-      </div>
-    </motion.div>
-  </div>
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="relative z-10">
+            <h2 className="text-[12px] uppercase tracking-[0.6em] text-[#C5A059] mb-6 font-bold">The 2026 Atelier</h2>
+            <h1 className="text-5xl lg:text-[5.5rem] font-serif leading-[1.05] mb-10 text-black">
+              Timeless <br /> 
+              <span className="text-[#C5A059] italic font-light drop-shadow-sm">Modesty</span>
+            </h1>
+            <p className="max-w-md text-gray-500 text-sm leading-relaxed mb-14 font-medium tracking-wide">
+              Bespoke B2B solutions for luxury boutiques. Premium Emirati craftsmanship designed for global elegance.
+            </p>
+            
+            <div className="flex flex-wrap items-center gap-10">
+              <Link href="/collections" className="px-12 py-5 bg-black text-white text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-[#C5A059] transition-all duration-500 shadow-2xl active:scale-95">
+                Shop Collection
+              </Link>
+              {/* Changed from Portal Link to Inquiry Link */}
+              <Link href="/contact" className="text-[11px] uppercase tracking-[0.3em] font-bold border-b border-gray-300 pb-1 hover:border-black transition-all text-black">
+                Wholesale Inquiry
+              </Link>
+            </div>
+          </motion.div>
+        </div>
 
-  {/* Right Image Column: min-h forces image visibility on short screens */}
-  <div className="w-full md:w-1/2 min-h-[500px] md:min-h-full relative group bg-white overflow-hidden">
-    <AnimatePresence mode="wait">
-      <motion.div 
-        key={currentIndex}
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ 
-          opacity: 1, 
-          scale: 1.12, 
-          transition: { 
-            opacity: { duration: 1.5 }, 
-            scale: { duration: 9, ease: "linear" }
-          }
-        }}
-        exit={{ opacity: 0, transition: { duration: 1.2 }}}
-        className="absolute inset-0 w-full h-full"
-      >
-        <Image 
-          src={HERO_IMAGES[currentIndex]} 
-          alt="Sauda Collection" 
-          fill 
-          className="object-cover object-top" 
-          priority 
-          unoptimized 
-        />
-      </motion.div>
-    </AnimatePresence>
-    
-    {/* Image Counter Overlay */}
-    <div className="absolute bottom-12 right-12 text-[11px] uppercase tracking-[0.5em] text-white/90 drop-shadow-md z-10 font-bold">
-      0{currentIndex + 1} / 05
-    </div>
-  </div>
-</section>
+        <div className="w-full md:w-1/2 min-h-[500px] md:min-h-full relative group bg-white overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div key={currentIndex} initial={{ opacity: 0, scale: 1 }} animate={{ opacity: 1, scale: 1.12, transition: { opacity: { duration: 1.5 }, scale: { duration: 9, ease: "linear" } } }} exit={{ opacity: 0, transition: { duration: 1.2 }}} className="absolute inset-0 w-full h-full">
+              <Image src={HERO_IMAGES[currentIndex]} alt="Sauda Collection" fill className="object-cover object-top" priority unoptimized />
+            </motion.div>
+          </AnimatePresence>
+          <div className="absolute bottom-12 right-12 text-[11px] uppercase tracking-[0.5em] text-white/90 drop-shadow-md z-10 font-bold">
+            0{currentIndex + 1} / 05
+          </div>
+        </div>
+      </section>
+
       {/* --- TRUST RIBBON --- */}
       <section className="py-16 bg-[#F7F3EB] border-y border-[#E8E2D5] relative z-20">
         <div className="max-w-[1600px] mx-auto px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12">
@@ -175,15 +132,18 @@ export default function SaudaFullPage() {
                   </div>
                   <div className="text-center space-y-3">
                     <h3 className="text-[12px] uppercase tracking-[0.3em] font-bold text-black/90 group-hover:text-[#C5A059] transition-colors">{item.name}</h3>
-                    <span className="text-[11px] text-gray-400 font-sans tracking-widest block">{item.price}</span>
+                    {/* Decorative line instead of price */}
+                    <div className="flex justify-center pt-2">
+                       <div className="w-6 h-[1px] bg-gray-200 group-hover:w-10 group-hover:bg-[#C5A059] transition-all duration-500" />
+                    </div>
                   </div>
                 </motion.div>
               </Link>
             ))}
           </div>
         </div>
-        
       </section>
+
       {/* --- HANDCRAFTED UAE SECTION --- */}
       <section className="py-24 bg-white border-t border-gray-100/50 overflow-hidden">
         <div className="max-w-[1800px] mx-auto px-10 flex flex-col md:flex-row items-center gap-16 lg:gap-24">
@@ -207,34 +167,22 @@ export default function SaudaFullPage() {
           </div>
         </div>
       </section>
- {/* --- EXPLORE COLLECTIONS SECTION (REPOSITIONED) --- */}
+
+      {/* --- EXPLORE COLLECTIONS --- */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 space-y-2">
             <span className="text-[10px] uppercase tracking-[0.6em] text-gray-400 font-bold block">Our Atelier</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-black">
-              Explore <span className="text-[#C5A059]">Collections</span>
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-black">Explore <span className="text-[#C5A059]">Collections</span></h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {CATEGORIES.map((cat, i) => (
               <Link href={cat.link} key={i} className="group relative aspect-[4/5] overflow-hidden bg-gray-100 shadow-xl">
-                <Image 
-                  src={cat.img} 
-                  alt={cat.name} 
-                  fill 
-                  className="object-cover transition-transform duration-[2s] group-hover:scale-110" 
-                  unoptimized 
-                />
+                <Image src={cat.img} alt={cat.name} fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" unoptimized />
                 <div className="absolute inset-0 bg-black/15 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-white text-[12px] md:text-[14px] uppercase tracking-[0.5em] font-black drop-shadow-lg mb-4">
-                    {cat.name}
-                  </h3>
+                  <h3 className="text-white text-[12px] md:text-[14px] uppercase tracking-[0.5em] font-black drop-shadow-lg mb-4">{cat.name}</h3>
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 mt-2">
-                    <span className="px-6 py-2 border border-white text-white text-[9px] uppercase tracking-[0.3em] font-bold backdrop-blur-sm">
-                      View Collection
-                    </span>
+                    <span className="px-6 py-2 border border-white text-white text-[9px] uppercase tracking-[0.3em] font-bold backdrop-blur-sm">View Collection</span>
                   </div>
                 </div>
               </Link>
@@ -243,7 +191,7 @@ export default function SaudaFullPage() {
         </div>
       </section>
 
-      {/* --- PARTNER TESTIMONIALS RIBBON (REPOSITIONED) --- */}
+      {/* --- PARTNER TESTIMONIALS --- */}
       <section className="py-14 bg-[#F9F6F0] border-y border-[#E8E2D5]">
         <div className="max-w-[1600px] mx-auto px-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
           <div className="flex flex-col items-center md:items-start">
@@ -255,7 +203,7 @@ export default function SaudaFullPage() {
               {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-[#C5A059] text-[#C5A059]" />)}
             </div>
             <p className="text-[11px] md:text-[13px] text-gray-500 italic font-medium text-center leading-relaxed">
-              "SAUDA’s B2B portal made our seasonal ordering seamless. The 5-day delivery to Paris is a game changer."
+              "SAUDA’s ordering process for our Paris boutique was seamless. The 5-day delivery is a game changer for our seasonal stock."
             </p>
           </div>
           <div className="flex flex-col items-center md:items-end">
@@ -265,13 +213,12 @@ export default function SaudaFullPage() {
         </div>
       </section>
 
-      {/* --- NEW ARRIVALS (RESTORED) --- */}
+      {/* --- NEW ARRIVALS --- */}
       <section className="pt-14 pb-28 bg-[#FAFAFA] overflow-hidden border-t border-gray-100">
         <div className="max-w-[1800px] mx-auto px-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-serif italic font-light">The <span className="text-[#C5A059]">New</span> Arrivals</h2>
           </div>
-
           <div className="relative group">
             <div ref={scrollRef} className="flex gap-10 overflow-x-auto no-scrollbar snap-x pb-10">
               {NEW_ARRIVALS.map((item, i) => (
@@ -286,9 +233,6 @@ export default function SaudaFullPage() {
           </div>
         </div>
       </section>
-
-      
-    
     </div>
   );
 }

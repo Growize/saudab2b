@@ -127,7 +127,7 @@ export default function AtelierHeritage() {
               },
               { 
                 step: "02", 
-                title: "Handwork", 
+                title: "Handwork/Embroidery", 
                 desc: "Every intricate pattern is a testament to time, often requiring over 40 hours of manual needlework by our artisans." 
               },
               { 

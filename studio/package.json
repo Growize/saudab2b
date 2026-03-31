@@ -1,0 +1,23 @@
+{
+  "name": "sauda-studio",
+  "version": "1.0.0",
+  "description": "SAUDA Couture Admin Studio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "start": "sanity start",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@sanity/vision": "^3.99.0",
+    "lucide-react": "^0.363.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "^3.34.0",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
